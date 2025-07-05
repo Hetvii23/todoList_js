@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="p3.css" />
+  <title>Todo App</title>
+</head>
+<body>
+  <h1>todos</h1>
+  <section class="todoapp">
+    <header>
+      <div class="input-container">
+        <input id="todo-input" class="new-todo" type="text" placeholder="What needs to be done?" />
+        <button id="checked" class="checked" style="display:none;">  <svg xmlns="http://www.w3.org/2000/svg"fill="currentColor" width="26" height="26">
+    <path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>
+</button>
+      </div>
+    </header>
+    <main id="main">
+      <ul id="todoList"></ul>
+    </main>
+    <footer id="footer" class="footer" style="display:none;">
+      <span id="todo-count" class="todo-count"></span>
+      <div class="filters">
+        <button id="All" class="All">All</button>
+        <button id="Active" class="Active">Active</button>
+        <button id="Completed" class="Completed">Completed</button>
+        <button id="clear-completed" class="clear-completed" style="display:none;">Clear completed</button>
+      </div>
+    </footer>
+  </section>
+  <script src="p2.js"></script>
+</body>
+</html>

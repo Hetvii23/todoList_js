@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bec7dd;
+  color: #3d456d;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333d57;
+  font-size: 64px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.todoapp {
+  background: #dce3fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.todoapp:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5d9ec;
+  padding: 12px 16px;
+  background: #ecf0fd;
+}
+
+.new-todo {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  font-size: 20px;
+  background: #f5f7ff;
+  font-weight: 300;
+  color: #5c6bc0;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s;
+}
+
+.new-todo:focus {
+  background: #fff;
+  border: 1px solid #939feb;
+}
+
+.new-todo::placeholder {
+  color: #b3b3b3;
+}
+
+button {
+  background-color: #b4c6e7 ;
+  color: #1a1a1a;
+  padding: 10px 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #6c9be1;
+  color: #ffffff;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todoList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background-color: #f1f3fa;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: background 0.2s ease;
+}
+
+#todoList li:hover {
+  background-color: #e6e9f5;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  accent-color: #8fb6eb;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#todoList li span.todo-text {
+  flex: 1;
+  margin-left: 10px;
+  color: #2d2d2d;
+  word-break: break-word;
+}
+
+.cancel {
+  font-size: 18px;
+  margin-left: 10px;
+  background: transparent;
+  color: #6a6767;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  transition: color 0.3s ease;
+}
+
+#todoList li:hover .cancel {
+  visibility: visible;
+}
+
+.cancel:hover {
+  background-color: #cbc2c2;
+  color: white;
+  border-radius: 4px;
+}
+
+.todo-count {
+  font-size: 18px;
+  color: #23395d;
+  margin-left: 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #5a5a5a;
+  border-top: 1px solid #d4d4d4;
+  background-color: #f5f7ff;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.filters button {
+  color: #0f0f0f;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.edit-input {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  color: #7d9df6;
+}
+
+#todoList li.editing {
+  padding: 0;
+}
+#checked {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #ffffff; 
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #23395d; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#checked:hover {
+  background-color: #344a75;
+  color: #ffffff !important;  
+}
+
+
+.checked-default {
+  background-color: #23395d !important;
+  color: #ffffff !important;
+}
+
+/* Background color when ALL items are checked */
+.checked-active {
+  background-color: #7d9df6 !important;
+  color: #000000 !important;
+}
